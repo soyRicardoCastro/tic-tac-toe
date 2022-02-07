@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
 *, *::after, *::before {
 	box-sizing: border-box;
 }
@@ -9,9 +11,11 @@
 
 body {
 	margin: 0;
+	font-family: 'Acme', serif;
 }
 
 .board {
+	background-color: #ff8e00;
 	width: 100vw;
 	height: 100vh;
 	display: grid;
@@ -25,7 +29,7 @@ body {
 .cell {
 	width: var(--cell-size);
 	height: var(--cell-size);
-	border: 1px solid #000;
+	border: 1px solid #fff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -62,7 +66,7 @@ body {
 .cell.x::after,
 .cell.circle::before,
 .cell.circle::after {
-	background-color: #000;
+	background-color: #fff;
 }
 
 .board.x .cell:not(.x):not(.circle):hover::before,
@@ -110,7 +114,7 @@ body {
 .board.circle .cell:not(.x):not(.circle):hover::after {
 	width: calc(var(--mark-size) * .7);
 	height: calc(var(--mark-size) * .7);
-	background-color: #fff;
+	background-color: #ff8e00;
 }
 
 .winning-message {
@@ -130,8 +134,11 @@ body {
 
 .winning-message button {
 	font-size: 3rem;
-	background-color: #fff;
-	border: 1px solid #000;
+	background-color: #ff8e00;
+	border: 3px solid #fff;
+	border-radius: 5px;
+	color: #fff;
+	font-family: inherit;
 	padding: 0.25em .5em;
 	cursor: pointer;
 	transition: .3s ease all;
