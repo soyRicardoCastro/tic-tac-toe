@@ -118,6 +118,7 @@ body {
 }
 
 .winning-message {
+	text-align: center;
 	display: none;
 	position: fixed;
 	top: 0;
